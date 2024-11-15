@@ -50,7 +50,7 @@ foreach($list as $item) {
     $items = explode("/", $item['path']);
     $assets = array_pop($items);
     $path = implode("/", $items);
-    if (!is_dir($path)) {
+    if (!is_dir("./" . $path)) {
         mkdir("./" . $path, 0777, true);
     }
 
