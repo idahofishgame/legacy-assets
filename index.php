@@ -56,9 +56,9 @@ foreach($list as $item) {
 
     $file_name = basename($url);
     if (file_put_contents( "./" . $path . "/" . $file_name, file_get_contents($url))) {
-        echo "File downloaded successfully";
+        echo $file_name . " downloaded successfully \n";
     } else {
-        echo "File downloading failed.";
+        echo $file_name . " downloading failed \n";
     }
 }
 
